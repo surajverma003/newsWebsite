@@ -90,7 +90,7 @@ export default class News extends Component {
           <div className="row">
 
             {
-              !this.state.loading && this.state.articles.map((element, index) => {
+              !this.state.loading && this.state.articles && this.state.articles.map((element, index) => {
                 return (
                   <div className="col-md-4" style={this.gridObj} key={index}>
                     <NewsItem title={element.title ? element.title : ''} description={element.description ? element.description : ''} imageUrl={!element.urlToImage ? 'https://blog.fluidui.com/assets/images/posts/imageedit_1_9273372713.png' : element.urlToImage} newsUrl={element.url} />
